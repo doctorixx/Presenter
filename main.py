@@ -15,9 +15,7 @@ try:
             pyautogui.press("right")
         if data == "click2":
             pyautogui.press("left")
-        # pyautogui.press("-")
 
-    # ---------------------------------
 
 except Exception as e:
     print("[ERROR]: ", e)
