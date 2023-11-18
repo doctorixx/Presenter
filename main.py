@@ -9,12 +9,15 @@ try:
     print("Connected")
 
     while True:
-        data = ser.readline().decode("utf-8").replace("\r\n", "")
-        print(data)
-        if data == "click":
-            pyautogui.press("right")
-        if data == "click2":
-            pyautogui.press("left")
+        try:
+            data = ser.readline().decode("utf-8").replace("\r\n", "")
+            print(data)
+            if data == "click":
+                pyautogui.press("right")
+            if data == "click2":
+                pyautogui.press("left")
+        except Exception as e:
+            print("[WARN]: ", e)
 
 
 except Exception as e:
